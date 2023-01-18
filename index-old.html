@@ -204,8 +204,8 @@ margin-top: 20px;
 display: inline-block;
 width:100%;
 }
-.left-sidebar, .right-sidebar{
-    width:20%;
+.left-sidebar{
+    width:25%;
 display: flex;
  padding: 20px;
     flex-direction: column;
@@ -213,20 +213,20 @@ background: #F6F7F9;
 }
 .content-area{
 display:flex;
-width:60%;
+width:75%;
 padding:20px;
 flex-direction: column;}
- ul.sidebar {
+ .left-sidebar ul {
                 display: flex;
 flex-wrap: wrap;
             }
 
-            ul.sidebar li {
+            .left-sidebar ul li {
                width:100%;
                 margin-bottom: 10px;
             }
 
-            ul.sidebar li a {
+            .left-sidebar ul li a {
                 /* padding: 10px 0;
                 border-bottom: 2px solid #efefef;
                 
@@ -245,13 +245,13 @@ box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
 background: #fff;
             }
 
-            ul.sidebar li a img {
+            .left-sidebar ul li a img {
                 height: 30px;
                 width: 30px;
                 border-radius: 50%;
                 margin-right: 10px;
             }
- ul.sidebar li a:hover{
+ .left-sidebar ul li a:hover{
 background: #62419A;
 color:#fff;
 }
@@ -316,7 +316,7 @@ margin: 0;
             }
  ul.newspaper  {
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(6, 1fr);
             }
 
             ul.newspaper li  {
@@ -335,8 +335,7 @@ text-align: center;
                 box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
                 border-bottom: 2px solid #62419A;
             }
-ul.newspaper li a h3{    min-height: 42px;
-    padding: 0 5px;}
+ul.newspaper li a h3{min-height: 42px;}
             ul.newspaper li a img {
                 width: 100%;
                 margin-bottom: 10px;
@@ -389,7 +388,7 @@ ul.newspaper li a h3{    min-height: 42px;
     <div class="left-sidebar">
     <h2 class="display-2">Newspapers By Countries</h2>
 
-                        <ul class="sidebar">
+                        <ul>
                             <li><a href=""><img src="images/flags/afghanistan.svg" />Afghanistan</a></li>
                             <li><a href=""><img src="images/flags/albania.svg" />Albania</a></li>
                             <li><a href=""><img src="images/flags/algeria.svg" />Algeria</a></li>
@@ -744,127 +743,6 @@ ul.newspaper li a h3{    min-height: 42px;
                                     </a></li>
 </ul>
 </div>
-
-<div class="right-sidebar">
-  <h2 class="display-2">Magazine In Hindi</h2>
-
-                        <ul class="sidebar">
-                           
-                            <li><a href="">Aap Ka Bhavishya Magazine Online</a></li>
-                        
-                            <li><a href="">Abhivyakti Magazine Online</a></li>
-                       
-                            <li><a href="">Aha Zindagi Magazine Online</a></li>
-                      
-                            <li><a href="">Bal Bhaskar Magazine Online</a></li>
-                   
-                   
-                            <li><a href="">Bharat Darshan Hindi Magazine</a></li>
-                    
-                            <li><a href="">Cable Quest Hindi Magazine</a></li>
-                     
-                            <li><a href="">Coal Insights Magazine</a></li>
-                      
-                            <li><a href="">Cricket Samrat Magazine Onlin</a></li>
-                       
-                            <li><a href="">Cricket Today Hindi</a></li>
-                        
-                            <li><a href="">Film City Magazine Online</a></li>
-                       
-                            <li><a href="">Filmi Duniya Magazine Online</a></li>
-                       
-                            <li><a href="">Filmi Kaliya Magazine Online</a></li>
-                       
-                            <li><a href="">Grih Shobha</a></li>
-                    
-                            <li><a href="">Grihlakshmi Magazine</a></li>
-                      
-                            <li><a href="">Guldusta Magazine</a></li>
-                     
-                            <li><a href="">Health Plus Hindi Magazine</a></li>
-                       
-                            <li><a href="">Hello Hindustan Magazine</a></li>
-                        
-                            <li><a href="">India Today Hindi Magazine</a></li>
-                        
-                            <li><a href="">Jeevan Nidhi Hindi Magazine</a></li>
-                       
-                            <li><a href="">Kadambini Magazine Online</a></li>
-                       
-                            <li><a href="">Kingstar Magazine Online</a></li>
-                   
-                            <li><a href="">Lakshya Magazine Online</a></li>
-                       
-                            <li><a href="">Madhur Kathayen Magazine Online</a></li>
-                       
-                            <li><a href="">Manohar Kahaniyan eMag</a></li>
-                      
-                            <li><a href="">Mantra Tantra Yantra Vigyan Magazine Online</a></li>
-                        
-                            <li><a href="">Masala Magazine Online</a></li>
-                       
-                            <li><a href="">Mayapuri Magazine Online</a></li>
-                        
-                            <li><a href="">Meri Saheli Magazine</a></li>
-                       
-                            <li><a href="">Metro Ujala Hindi Magazine</a></li>
-                       
-                            <li><a href="">Modern Kheti Hindi Magazine</a></li>
-                        
-                            <li><a href="">Mukta Magazine</a></li>
-                        
-                            <li><a href="">Nandan Magazine Online</a></li>
-                        
-                            <li><a href="">Nirogdham Magazine Online</a></li>
-                        
-                            <li><a href="">Nutan Kahaniyana Magazine Online</a></li>
-                       
-                            <li><a href="">Osho Dhara Hindi Magazine</a></li>
-                       
-                            <li><a href="">Osho Times Magazine Online</a></li>
-                       
-                            <li><a href="">Pratham Impact Magazine Online</a></li>
-                        
-                            <li><a href="">Pratiyogita Darpan Hindi</a></li>
-                        
-                            <li><a href="">Raj Sarokor Magazine</a></li>
-                      
-                            <li><a href="">Sachchi Kahaniyan Magazine Online</a></li>
-                       
-                            <li><a href="">Sadhana Path Magazine</a></li>
-                       
-                            <li><a href="">Sakhi Magazine Online</a></li>
-                        
-                            <li><a href="">Samvaad Darpan Magazine Online</a></li>
-                       
-                            <li><a href="">Saras Salil Magazine</a></li>
-                      
-                            <li><a href="">Sarita Online Magazine</a></li>
-                        
-                            <li><a href="">Satya Katha eMagazine</a></li>
-                       
-                            <li><a href="">Sowbhagya Deep Magazine Online</a></li>
-                     
-                            <li><a href="">Steel Insights Hindi Magazine</a></li>
-                       
-                            <li><a href="">Suman Saurabh Magazine</a></li>
-                      
-                            <li><a href="">Suspense Kahaniyan Magazine Online</a></li>
-                      
-                            <li><a href="">Tadbhav Magazine Online</a></li>
-                       
-                            <li><a href="">Taptilok Magazine Online</a></li>
-                       
-                            <li><a href="">Tehelka Hindi Magazine</a></li>
-                        
-                            <li><a href="">The Sunday Indian Magazine Online</a></li>
-                       
-                            <li><a href="">Vanitha Hindi Magazine</a></li>
-                       
-                            <li><a href="">Ved Amrut Magazine Online</a></li>
-                       
-
-                        </ul></div>
    
 </div>
 </div>

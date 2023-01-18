@@ -122,20 +122,23 @@
                 padding: 0 20px;
             }
 
-           
+
 
             /* .topbar img{
     width:200px;
 } */
             .header {
                 /* background-image: linear-gradient(to bottom, #f9e7ff, #f9edff, #f9f4ff, #fcfaff, #ffffff); */
-box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
-background-color: #fff; 
-display: inline-block;
-width: 100%;
+                box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+                background-color: #fff;
+                display: inline-block;
+                width: 100%;
             }
-.logo img{
-width:230px;}
+
+            .logo img {
+                width: 230px;
+            }
+
             .navbar {
                 /* box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important; 
 background-color: #fff;*/
@@ -145,8 +148,8 @@ background-color: #fff;*/
                 display: flex;
                 justify-content: space-between;
                 flex-direction: row;
-         
-               
+
+
 
             }
 
@@ -155,7 +158,7 @@ background-color: #fff;*/
                 flex-direction: row;
             }
 
-           
+
 
             .navbar>ul>li>a {
                 letter-spacing: -0.01rem;
@@ -165,7 +168,7 @@ background-color: #fff;*/
                 color: #343f52;
                 display: inline-block;
                 padding: 25px 10px;
-              margin:0 8px;
+                margin: 0 8px;
             }
 
             .navbar>ul>li>a:hover,
@@ -198,35 +201,41 @@ background-color: #fff;*/
             .align-items-center {
                 align-items: center !important;
             }
-.white-bg{
-background: #fff;
-margin-top: 20px;
-display: inline-block;
-width:100%;
-}
-.left-sidebar{
-    width:25%;
-display: flex;
- padding: 20px;
-    flex-direction: column;
-background: #F6F7F9;
-}
-.content-area{
-display:flex;
-width:75%;
-padding:20px;
-flex-direction: column;}
- .left-sidebar ul {
-                display: flex;
-flex-wrap: wrap;
+
+            .white-bg {
+                background: #fff;
+                margin-top: 20px;
+                display: inline-block;
+                width: 100%;
             }
 
-            .left-sidebar ul li {
-               width:100%;
+            .left-sidebar,
+            .right-sidebar {
+                width: 20%;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                background: #F6F7F9;
+            }
+
+            .content-area {
+                display: flex;
+                width: 60%;
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            ul.sidebar {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            ul.sidebar li {
+                width: 100%;
                 margin-bottom: 10px;
             }
 
-            .left-sidebar ul li a {
+            ul.sidebar li a {
                 /* padding: 10px 0;
                 border-bottom: 2px solid #efefef;
                 
@@ -236,33 +245,36 @@ flex-wrap: wrap;
                 border-top: 2px solid #62419A;*/
                 font-size: 13px;
                 font-weight: 700;
-display: flex;
+                display: flex;
                 align-items: center;
- width: 100%;
-padding:10px;
-              
-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-background: #fff;
+                width: 100%;
+                padding: 10px;
+
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+                background: #fff;
             }
 
-            .left-sidebar ul li a img {
+            ul.sidebar li a img {
                 height: 30px;
                 width: 30px;
                 border-radius: 50%;
                 margin-right: 10px;
             }
- .left-sidebar ul li a:hover{
-background: #62419A;
-color:#fff;
-}
-.display-1 {
+
+            ul.sidebar li a:hover {
+                background: #62419A;
+                color: #fff;
+            }
+
+            .display-1 {
                 font-size: 2.5rem;
-                position: relative; 
-margin: 0;
+                position: relative;
+                margin: 0;
                 padding-bottom: 15px;
                 margin-bottom: 15px;
 
             }
+
             .display-1::before {
                 content: "";
                 position: absolute;
@@ -284,7 +296,8 @@ margin: 0;
                 bottom: 0;
                 left: 4%;
             }
- .display-2 {
+
+            .display-2 {
                 font-size: 19px;
                 text-align: center;
                 margin: 0;
@@ -314,14 +327,15 @@ margin: 0;
                 bottom: 0;
                 left: calc(50% - 20px);
             }
- ul.newspaper  {
+
+            ul.newspaper {
                 display: grid;
-                grid-template-columns: repeat(6, 1fr);
+                grid-template-columns: repeat(5, 1fr);
             }
 
-            ul.newspaper li  {
+            ul.newspaper li {
                 margin: 10px;
-text-align: center;
+                text-align: center;
             }
 
             ul.newspaper li a {
@@ -335,12 +349,17 @@ text-align: center;
                 box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
                 border-bottom: 2px solid #62419A;
             }
-ul.newspaper li a h3{min-height: 42px;}
+
+            ul.newspaper li a h3 {
+                min-height: 42px;
+                padding: 0 5px;
+text-transform: uppercase;
+            }
+
             ul.newspaper li a img {
                 width: 100%;
                 margin-bottom: 10px;
             }
-    
 
         </style>
     </head>
@@ -351,13 +370,13 @@ ul.newspaper li a h3{min-height: 42px;}
             <div class="container">
 
                 <nav class="navbar">
-<a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
+                    <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
                     <ul class="navbar-nav">
-                        <li><a href="" class="active">Home</a></li>
-                        <li><a href="">Epapers</a></li>
-                        <li><a href="">Magazine</a></li>
-                        <li><a href="">Language Wise NewsPaper</a></li>
-                        <li><a href="">Country Wise NewsPaper</a></li>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Epapers</a></li>
+                        <li><a href="#">Magazine</a></li>
+                        <li><a href="#">Language Wise NewsPaper</a></li>
+                        <li><a href="#">Country Wise NewsPaper</a></li>
                     </ul>
 
 
@@ -365,9 +384,9 @@ ul.newspaper li a h3{min-height: 42px;}
 
                     <div class="social-bar">
                         <ul>
-                            <li><a href=""><img src="images/facebook.png" /></a></li>
-                            <li><a href=""><img src="images/twitter.png" /></a></li>
-                            <li><a href=""><img src="images/instagram.png" /></a></li>
+                            <li><a href="#"><img src="images/facebook.png" /></a></li>
+                            <li><a href="#"><img src="images/twitter.png" /></a></li>
+                            <li><a href="#"><img src="images/instagram.png" /></a></li>
 
                         </ul>
                     </div>
@@ -382,371 +401,464 @@ ul.newspaper li a h3{min-height: 42px;}
 
         </section>
 
-<section class="white-bg">
-    <div class="container">
-    <div class="row">
-    <div class="left-sidebar">
-    <h2 class="display-2">Newspapers By Countries</h2>
+        <section class="white-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="left-sidebar">
+                        <h2 class="display-2">Newspapers By Countries</h2>
 
-                        <ul>
-                            <li><a href=""><img src="images/flags/afghanistan.svg" />Afghanistan</a></li>
-                            <li><a href=""><img src="images/flags/albania.svg" />Albania</a></li>
-                            <li><a href=""><img src="images/flags/algeria.svg" />Algeria</a></li>
-                            <li><a href=""><img src="images/flags/antigua-and-barbuda.svg" />Antigua and Barbuda</a>
+                        <ul class="sidebar">
+                            <li><a href="#" title="Afghanistan"><img alt="Afghanistan" src="images/flags/afghanistan.svg" />Afghanistan</a></li>
+                            <li><a href="#" title="Albania"><img alt="Albania" src="images/flags/albania.svg" />Albania</a></li>
+                            <li><a href="#" title="Algeria"><img alt="Algeria" src="images/flags/algeria.svg" />Algeria</a></li>
+                            <li><a href="#" title="Antigua and Barbuda"><img alt="Antigua and Barbuda" src="images/flags/antigua-and-barbuda.svg" />Antigua and Barbuda</a>
                             </li>
-                            <li><a href=""><img src="images/flags/argentina.svg" />Argentina</a></li>
-                            <li><a href=""><img src="images/flags/australia.svg" />Australia</a></li>
-                            <li><a href=""><img src="images/flags/bangladesh.svg" />Bangladesh</a></li>
-                            <li><a href=""><img src="images/flags/canada.svg" />Canada</a></li>
-                            <li><a href=""><img src="images/flags/china.svg" />China</a></li>
-                            <li><a href=""><img src="images/flags/colombia.svg" />Colombia</a></li>
-                            <li><a href=""><img src="images/flags/croatia.svg" />Croatia</a></li>
-                            <li><a href=""><img src="images/flags/finland.svg" />Finland</a></li>
-                            <li><a href=""><img src="images/flags/france.svg" />France</a></li>
-                            <li><a href=""><img src="images/flags/germany.svg" />Germany</a></li>
-                            <li><a href=""><img src="images/flags/hong-kong.svg" />Hong Kong</a></li>
-                            <li><a href=""><img src="images/flags/india.svg" />India</a></li>
-                            <li><a href=""><img src="images/flags/indonesia.svg" />Indonesia</a></li>
-                            <li><a href=""><img src="images/flags/ireland.svg" />Ireland</a></li>
-                            <li><a href=""><img src="images/flags/italy.svg" />Italy</a></li>
-                            <li><a href=""><img src="images/flags/japan.svg" />Japan</a></li>
-                            <li><a href=""><img src="images/flags/kenya.svg" />Kenya</a></li>
-                            <li><a href=""><img src="images/flags/kuwait.svg" />Kuwait</a></li>
-                            <li><a href=""><img src="images/flags/malaysia.svg" />Malaysia</a></li>
-                            <li><a href=""><img src="images/flags/mexico.svg" />Mexico</a></li>
-                            <li><a href=""><img src="images/flags/nepal.svg" />Nepal</a></li>
-                            <li><a href=""><img src="images/flags/netherland.svg" />Netherland</a></li>
-                            <li><a href=""><img src="images/flags/new-zealand.svg" />New Zealand</a></li>
-                            <li><a href=""><img src="images/flags/nigeria.svg" />Nigeria</a></li>
-                            <li><a href=""><img src="images/flags/norway.svg" />Norway</a></li>
-                            <li><a href=""><img src="images/flags/pakistan.svg" />Pakistan</a></li>
-                            <li><a href=""><img src="images/flags/philippines.svg" />Philippines</a></li>
-                            <li><a href=""><img src="images/flags/poland.svg" />Poland</a></li>
-                            <li><a href=""><img src="images/flags/portugal.svg" />Portugal</a></li>
-                            <li><a href=""><img src="images/flags/romania.svg" />Romania</a></li>
-                            <li><a href=""><img src="images/flags/russia.svg" />Russia</a></li>
-                            <li><a href=""><img src="images/flags/saudi-arabia.svg" />Saudi Arabia</a></li>
-                            <li><a href=""><img src="images/flags/slovakia.svg" />Slovakia</a></li>
-                            <li><a href=""><img src="images/flags/south-africa.svg" />South Africa</a></li>
-                            <li><a href=""><img src="images/flags/spain.svg" />Spain</a></li>
-                            <li><a href=""><img src="images/flags/sri-lanka.svg" />Sri Lanka</a></li>
-                            <li><a href=""><img src="images/flags/sweden.svg" />Sweden</a></li>
-                            <li><a href=""><img src="images/flags/thailand.svg" />Thailand</a></li>
-                            <li><a href=""><img src="images/flags/uganda.svg" />Uganda</a></li>
-                            <li><a href=""><img src="images/flags/united-arab.svg" />United Arab</a></li>
-                            <li><a href=""><img src="images/flags/united-kingdom.svg" />United Kingdom</a></li>
-                            <li><a href=""><img src="images/flags/united-states-of-america.svg" />United States of
+                            <li><a href="#" title="Argentina"><img alt="Argentina" src="images/flags/argentina.svg" />Argentina</a></li>
+                            <li><a href="#" title="Australia"><img alt="Australia" src="images/flags/australia.svg" />Australia</a></li>
+                            <li><a href="#" title="Bangladesh"><img alt="Bangladesh" src="images/flags/bangladesh.svg" />Bangladesh</a></li>
+                            <li><a href="#" title="Canada"><img alt="Canada" src="images/flags/canada.svg" />Canada</a></li>
+                            <li><a href="#" title="China"><img alt="China" src="images/flags/china.svg" />China</a></li>
+                            <li><a href="#" title="Colombia"><img alt="Colombia" src="images/flags/colombia.svg" />Colombia</a></li>
+                            <li><a href="#" title="Croatia"><img alt="Croatia" src="images/flags/croatia.svg" />Croatia</a></li>
+                            <li><a href="#" title="Finland"><img alt="Finland" src="images/flags/finland.svg" />Finland</a></li>
+                            <li><a href="#" title="France"><img alt="France" src="images/flags/france.svg" />France</a></li>
+                            <li><a href="#" title="Germany"><img alt="Germany" src="images/flags/germany.svg" />Germany</a></li>
+                            <li><a href="#" title="Hong Kong"><img alt="Hong Kong" src="images/flags/hong-kong.svg" />Hong Kong</a></li>
+                            <li><a href="#" title="India"><img alt="India" src="images/flags/india.svg" />India</a></li>
+                            <li><a href="#" title="Indonesia"><img alt="Indonesia" src="images/flags/indonesia.svg" />Indonesia</a></li>
+                            <li><a href="#" title="Ireland"><img alt="Ireland" src="images/flags/ireland.svg" />Ireland</a></li>
+                            <li><a href="#" title="Italy"><img alt="Italy" src="images/flags/italy.svg" />Italy</a></li>
+                            <li><a href="#" title="Japan"><img alt="Japan" src="images/flags/japan.svg" />Japan</a></li>
+                            <li><a href="#" title="Kenya"><img alt="Kenya" src="images/flags/kenya.svg" />Kenya</a></li>
+                            <li><a href="#" title="Kuwait"><img alt="Kuwait" src="images/flags/kuwait.svg" />Kuwait</a></li>
+                            <li><a href="#" title="Malaysia"><img alt="Malaysia" src="images/flags/malaysia.svg" />Malaysia</a></li>
+                            <li><a href="#" title="Mexico"><img alt="Mexico" src="images/flags/mexico.svg" />Mexico</a></li>
+                            <li><a href="#" title="Nepal"><img alt="Nepal" src="images/flags/nepal.svg" />Nepal</a></li>
+                            <li><a href="#" title="Netherland"><img alt="Netherland" src="images/flags/netherland.svg" />Netherland</a></li>
+                            <li><a href="#" title="New Zealand"><img alt="New Zealand" src="images/flags/new-zealand.svg" />New Zealand</a></li>
+                            <li><a href="#" title="Nigeria"><img alt="Nigeria" src="images/flags/nigeria.svg" />Nigeria</a></li>
+                            <li><a href="#" title="Norway"><img alt="Norway" src="images/flags/norway.svg" />Norway</a></li>
+                            <li><a href="#" title="Pakistan"><img alt="Pakistan" src="images/flags/pakistan.svg" />Pakistan</a></li>
+                            <li><a href="#" title="Philippines"><img alt="Philippines" src="images/flags/philippines.svg" />Philippines</a></li>
+                            <li><a href="#" title="Poland"><img alt="Poland" src="images/flags/poland.svg" />Poland</a></li>
+                            <li><a href="#" title="Portugal"><img alt="Portugal" src="images/flags/portugal.svg" />Portugal</a></li>
+                            <li><a href="#" title="Romania"><img alt="Romania" src="images/flags/romania.svg" />Romania</a></li>
+                            <li><a href="#" title="Russia"><img alt="Russia" src="images/flags/russia.svg" />Russia</a></li>
+                            <li><a href="#" title="Saudi Arabia"><img alt="Saudi Arabia" src="images/flags/saudi-arabia.svg" />Saudi Arabia</a></li>
+                            <li><a href="#" title="Slovakia"><img alt="Slovakia" src="images/flags/slovakia.svg" />Slovakia</a></li>
+                            <li><a href="#" title="South Africa"><img alt="South Africa" src="images/flags/south-africa.svg" />South Africa</a></li>
+                            <li><a href="#" title="Spain"><img alt="Spain" src="images/flags/spain.svg" />Spain</a></li>
+                            <li><a href="#" title="Sri Lanka"><img alt="Sri Lanka" src="images/flags/sri-lanka.svg" />Sri Lanka</a></li>
+                            <li><a href="#" title="Sweden"><img alt="Sweden" src="images/flags/sweden.svg" />Sweden</a></li>
+                            <li><a href="#" title="Thailand"><img alt="Thailand" src="images/flags/thailand.svg" />Thailand</a></li>
+                            <li><a href="#" title="Uganda"><img alt="Uganda" src="images/flags/uganda.svg" />Uganda</a></li>
+                            <li><a href="#" title="United Arab"><img alt="United Arab" src="images/flags/united-arab.svg" />United Arab</a></li>
+                            <li><a href="#" title="United Kingdom"><img alt="United Kingdom" src="images/flags/united-kingdom.svg" />United Kingdom</a></li>
+                            <li><a href="#" title="United States of
+                                    America"><img alt="United States of
+                                    America" src="images/flags/united-states-of-america.svg" />United States of
                                     America</a></li>
-                            <li><a href=""><img src="images/flags/zimbabwe.svg" />Zimbabwe</a></li>
+                            <li><a href="#" title="Zimbabwe"><img alt="Zimbabwe" src="images/flags/zimbabwe.svg" />Zimbabwe</a></li>
                         </ul>
-</div>
-    <div class="content-area">
-    <h1 class="display-1">Hindi News Papers</h1>
-                            <ul class="newspaper">
-                                <li><a title="Aaj Samaj Epaper" href="/india/aaj-samaj-epaper.aspx"><img
-                                            alt="Aaj Samaj Epaper"
-                                            src="https://www.aajsamaaj.com/wp-content/uploads/2021/12/aajsamaaj_logo.png">
-                                        <h3>Aaj Samaj Epaper</h3>
-                                    </a></li>
-                                   
+                    </div>
+                    <div class="content-area">
+                        <h1 class="display-1">Hindi News Papers</h1>
+                        <ul class="newspaper">
+                            <li><a title="Aaj Samaj Epaper" href="#"><img alt="Aaj Samaj Epaper"
+                                        src="images/epaper/aajsamaaj.png">
+                                    <h3>Aaj Samaj Epaper</h3>
+                                </a></li>
 
 
-                                 <li><a title="Agniban epaper" href="/india/agniban-epaper.aspx"><img
-                                            alt="Agniban epaper"
-                                            src="https://www.aajsamaaj.com/wp-content/uploads/2021/12/aajsamaaj_logo.png">
-                                        <h3>Agniban epaper</h3>
-                                    </a></li>
 
-                                <li><a title="Amarujala" href="/india/amarujala.aspx"><img alt="Amarujala"
-                                            src="https://www.aajsamaaj.com/wp-content/uploads/2021/12/aajsamaaj_logo.png">
-                                        <h3>Amarujala</h3>
-                                    </a></li>
+                            <li><a title="Agniban epaper" href="#"><img alt="Agniban epaper"
+                                        src="images/epaper/agniban.png">
+                                    <h3>Agniban epaper</h3>
+                                </a></li>
 
-                                <li><a title="Chauthi Duniya" href="/india/chauthi-duniya.aspx"><img
-                                            alt="Chauthi Duniya"
-                                            src="https://www.aajsamaaj.com/wp-content/uploads/2021/12/aajsamaaj_logo.png">
-                                        <h3>Chauthi Duniya</h3>
-                                    </a></li>
+                            <li><a title="Amarujala" href="#"><img alt="Amarujala"
+                                        src="images/epaper/amarujala.png">
+                                    <h3>Amarujala</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Bhaskar Jharkhand" href="/india/dainik-bhaskar-jharkhand.aspx"><img
-                                            alt="Dainik Bhaskar Jharkhand"
-                                            src="https://www.aajsamaaj.com/wp-content/uploads/2021/12/aajsamaaj_logo.png">
-                                        <h3>Dainik Bhaskar Jharkhand</h3>
-                                    </a></li>
+                            <li><a title="Chauthi Duniya" href="#"><img alt="Chauthi Duniya"
+                                        src="images/epaper/chauthi-duniya.png">
+                                    <h3>Chauthi Duniya</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Jagran" href="/india/dainik-jagran.aspx"><img alt="Dainik Jagran"
-                                            src="https://www.aajsamaaj.com/wp-content/uploads/2021/12/aajsamaaj_logo.png">
-                                        <h3>Dainik Jagran</h3>
-                                    </a></li>
+                            <li><a title="Dainik Bhaskar Jharkhand" href="#"><img alt="Dainik Bhaskar Jharkhand"
+                                        src="images/epaper/dainik-bhaskar-jharkhand.png">
+                                    <h3>Dainik Bhaskar Jharkhand</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Janwani Epaper" href="/india/dainik-janwani-epaper.aspx"><img
-                                            alt="Dainik Janwani Epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Dainik-Janwani-epaper.jpg">
-                                        <h3>Dainik Janwani Epaper</h3>
-                                    </a></li>
+                            <li><a title="Dainik Jagran" href="#"><img alt="Dainik Jagran"
+                                        src="images/epaper/dainik-jagran.png">
+                                    <h3>Dainik Jagran</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Navajyoti" href="/india/dainik-navajyoti.aspx"><img
-                                            alt="Dainik Navajyoti"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dainik-navajyoti.jpg">
-                                        <h3>Dainik Navajyoti</h3>
-                                    </a></li>
+                            <li><a title="Dainik Janwani Epaper" href="#"><img alt="Dainik Janwani Epaper"
+                                        src="images/epaper/dainik-janwani.jpg">
+                                    <h3>Dainik Janwani Epaper</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Purvoday" href="/india/dainik-purvoday.aspx"><img
-                                            alt="Dainik Purvoday"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dainik-purvoday-epaper.jpg">
-                                        <h3>Dainik Purvoday</h3>
-                                    </a></li>
+                            <li><a title="Dainik Navajyoti" href="#"><img alt="Dainik Navajyoti"
+                                        src="images/epaper/dainik-navajyoti.jpg">
+                                    <h3>Dainik Navajyoti</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Savera Epaper" href="/india/dainik-savera-epaper.aspx"><img
-                                            alt="Dainik Savera Epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dainik-savera-epaper.jpg">
-                                        <h3>Dainik Savera Epaper</h3>
-                                    </a></li>
+                            <li><a title="Dainik Purvoday" href="#"><img alt="Dainik Purvoday"
+                                        src="images/epaper/dainik-purvoday.jpg">
+                                    <h3>Dainik Purvoday</h3>
+                                </a></li>
 
-                                <li><a title="Dainik Tribune epaper" href="/india/dainik-tribune-epaper.aspx"><img
-                                            alt="Dainik Tribune epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Dainik-epaper-Tribune.jpg">
-                                        <h3>Dainik Tribune epaper</h3>
-                                    </a></li>
+                            <li><a title="Dainik Savera Epaper" href="#"><img alt="Dainik Savera Epaper"
+                                        src="images/epaper/dainik-savera.jpg">
+                                    <h3>Dainik Savera Epaper</h3>
+                                </a></li>
 
-                                <li><a title="Dakshin Bharat" href="/india/dakshin-bharat.aspx"><img
-                                            alt="Dakshin Bharat"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dakshin_bharat.jpg">
-                                        <h3>Dakshin Bharat</h3>
-                                    </a></li>
+                            <li><a title="Dainik Tribune epaper" href="#"><img alt="Dainik Tribune epaper"
+                                        src="images/epaper/dainik-tribune.jpg">
+                                    <h3>Dainik Tribune epaper</h3>
+                                </a></li>
 
-                                <li><a title="Dandakaranya" href="/india/dandakaranya.aspx"><img alt="Dandakaranya"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dandakaranya-samachar.jpg">
-                                        <h3>Dandakaranya</h3>
-                                    </a></li>
+                            <li><a title="Dakshin Bharat" href="#"><img alt="Dakshin Bharat"
+                                        src="images/epaper/dakshin_bharat.jpg">
+                                    <h3>Dakshin Bharat</h3>
+                                </a></li>
 
-                                <li><a title="Desh Doot" href="/india/desh-doot.aspx"><img alt="Desh Doot"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/desh_doot.jpg">
-                                        <h3>Desh Doot</h3>
-                                    </a></li>
+                            <li><a title="Dandakaranya" href="#"><img alt="Dandakaranya"
+                                        src="images/epaper/dandakaranya-samachar.jpg">
+                                    <h3>Dandakaranya</h3>
+                                </a></li>
 
-                                <li><a title="Deshbandhu" href="/india/deshbandhu.aspx"><img alt="Deshbandhu"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Deshbandhu.jpg">
-                                        <h3>Deshbandhu</h3>
-                                    </a></li>
+                            <li><a title="Desh Doot" href="#"><img alt="Desh Doot"
+                                        src="images/epaper/desh_doot.jpg">
+                                    <h3>Desh Doot</h3>
+                                </a></li>
 
-                                <li><a title="Divya Himachal epaper" href="/india/divya-himachal-epaper.aspx"><img
-                                            alt="Divya Himachal epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/divya-himachal-epaper.jpg">
-                                        <h3>Divya Himachal epaper</h3>
-                                    </a></li>
+                            <li><a title="Deshbandhu" href="#"><img alt="Deshbandhu"
+                                        src="images/epaper/deshbandhu.jpg">
+                                    <h3>Deshbandhu</h3>
+                                </a></li>
 
-                                <li><a title="DLA" href="/india/dla.aspx"><img alt="DLA"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dla_media.jpg">
-                                        <h3>DLA</h3>
-                                    </a></li>
+                            <li><a title="Divya Himachal epaper" href="#"><img alt="Divya Himachal epaper"
+                                        src="images/epaper/divya-himachal.jpg">
+                                    <h3>Divya Himachal epaper</h3>
+                                </a></li>
 
-                                <li><a title="DNA" href="/india/dna.aspx"><img alt="DNA"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/21_17_050382506dailynewsactivist.jpg">
-                                        <h3>DNA</h3>
-                                    </a></li>
+                            <li><a title="DLA" href="#"><img alt="DLA"
+                                        src="images/epaper/dla_media.jpg">
+                                    <h3>DLA</h3>
+                                </a></li>
 
-                                <li><a title="Hari Bhoomi" href="/india/hari-bhoomi.aspx"><img alt="Hari Bhoomi"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Hari-Bhoomi.jpg">
-                                        <h3>Hari Bhoomi</h3>
-                                    </a></li>
+                            <li><a title="DNA" href="#"><img alt="DNA"
+                                        src="images/epaper/dna.jpg">
+                                    <h3>DNA</h3>
+                                </a></li>
 
-                                <li><a title="Jagat Kranti Epaper" href="/india/jagat-kranti-epaper.aspx"><img
-                                            alt="Jagat Kranti Epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Jagat-kranti-Epaper.jpg">
-                                        <h3>Jagat Kranti Epaper</h3>
-                                    </a></li>
+                            <li><a title="Hari Bhoomi" href="#"><img alt="Hari Bhoomi"
+                                        src="images/epaper/hari-bhoomi.jpg">
+                                    <h3>Hari Bhoomi</h3>
+                                </a></li>
 
-                                <li><a title="Janadesh" href="/india/janadesh.aspx"><img alt="Janadesh"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/janadesh.jpg">
-                                        <h3>Janadesh</h3>
-                                    </a></li>
+                            <li><a title="Jagat Kranti Epaper" href="#">
+                                            <img src="images/epaper/Jagat-kranti-Epaper.jpg" alt="Jagat Kranti">
+                                    <h3>Jagat Kranti Epaper</h3>
+                                </a></li>
 
-                                <li><a title="Jansatta" href="/india/jansatta.aspx"><img alt="Jansatta"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/jansatta.jpg">
-                                        <h3>Jansatta</h3>
-                                    </a></li>
+                            <li><a title="Janadesh" href="#"><img alt="Janadesh"
+                                        src="images/epaper/janadesh.jpg">
+                                    <h3>Janadesh</h3>
+                                </a></li>
 
-                                <li><a title="Khabar Express" href="/india/khabar-express.aspx"><img
-                                            alt="Khabar Express"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/khabar-express.jpg">
-                                        <h3>Khabar Express</h3>
-                                    </a></li>
+                            <li><a title="Jansatta" href="#"><img alt="Jansatta"
+                                        src="images/epaper/jansatta.jpg">
+                                    <h3>Jansatta</h3>
+                                </a></li>
 
-                                <li><a title="Lalkar paper" href="/india/lalkar-paper.aspx"><img alt="Lalkar paper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/lalkar-paper.jpg">
-                                        <h3>Lalkar paper</h3>
-                                    </a></li>
+                            <li><a title="Khabar Express" href="#"><img alt="Khabar Express"
+                                        src="images/epaper/khabar-express.jpg">
+                                    <h3>Khabar Express</h3>
+                                </a></li>
 
-                                <li><a title="Milap" href="/india/milap.aspx"><img alt="Milap"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/web-milap.jpg">
-                                        <h3>Milap</h3>
-                                    </a></li>
+                            <li><a title="Lalkar paper" href="#"><img alt="Lalkar paper"
+                                        src="images/epaper/lalkar-paper.jpg">
+                                    <h3>Lalkar paper</h3>
+                                </a></li>
 
-                                <li><a title="Naidunia" href="/india/naidunia.aspx"><img alt="Naidunia"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/21_29_418267798naidunia.jpg">
-                                        <h3>Naidunia</h3>
-                                    </a></li>
+                            <li><a title="Milap" href="#"><img alt="Milap"
+                                        src="images/epaper/milap.jpg">
+                                    <h3>Milap</h3>
+                                </a></li>
 
-                                <li><a title="Navbharat Times" href="/india/navbharat-times.aspx"><img
-                                            alt="Navbharat Times"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/navbharattimes.jpg">
+                            <li><a title="Naidunia" href="#"><img alt="Naidunia"
+                                        src="images/epaper/naidunia.jpg">
+                                    <h3>Naidunia</h3>
+                                </a></li>
 
-                                        <h3>Navbharat Times</h3>
-                                    </a></li>
+                            <li><a title="Navbharat Times" href="#"><img alt="Navbharat Times"
+                                        src="images/epaper/navbharattimes.jpg">
 
-                                <li><a title="Navodaya Times epaper" href="/india/navodaya-times-epaper.aspx"><img
-                                            alt="Navodaya Times epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/epaper-navodayatimes.jpg">
-                                        <h3>Navodaya Times epaper</h3>
-                                    </a></li>
+                                    <h3>Navbharat Times</h3>
+                                </a></li>
 
-                                <li><a title="Naya India Epaper" href="/india/naya-india-epaper.aspx"><img
-                                            alt="Naya India Epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/naya-india-epaper.jpg">
-                                        <h3>Naya India Epaper</h3>
-                                    </a></li>
+                            <li><a title="Navodaya Times epaper" href="#"><img alt="Navodaya Times epaper"
+                                        src="images/epaper/navodayatimes.jpg">
+                                    <h3>Navodaya Times epaper</h3>
+                                </a></li>
 
-                                <li><a title="Nobat" href="/india/nobat.aspx"><img alt="Nobat"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/nobat.jpg">
-                                        <h3>Nobat</h3>
-                                    </a></li>
+                            <li><a title="Naya India Epaper" href="#"><img alt="Naya India Epaper"
+                                        src="images/epaper/naya-india.jpg">
+                                    <h3>Naya India Epaper</h3>
+                                </a></li>
 
-                                <li><a title="Pehli Khabar" href="/india/pehli-khabar.aspx"><img alt="Pehli Khabar"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Pehli-Khabar.gif">
-                                        <h3>Pehli Khabar</h3>
-                                    </a></li>
+                            <li><a title="Nobat" href="#"><img alt="Nobat"
+                                        src="images/epaper/nobat.jpg">
+                                    <h3>Nobat</h3>
+                                </a></li>
 
-                                <li><a title="Peoples Samachar" href="/india/peoples-samachar.aspx"><img
-                                            alt="Peoples Samachar"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Peoples-Samachar.jpg">
-                                        <h3>Peoples Samachar</h3>
-                                    </a></li>
+                            <li><a title="Pehli Khabar" href="#"><img alt="Pehli Khabar"
+                                        src="images/epaper/pehli-khabar.jpg">
+                                    <h3>Pehli Khabar</h3>
+                                </a></li>
 
-                                <li><a title="Prabhat Khabar" href="/india/prabhat-khabar.aspx"><img
-                                            alt="Prabhat Khabar"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Prabhat-Khabar.jpg">
-                                        <h3>Prabhat Khabar</h3>
-                                    </a></li>
+                            <li><a title="Peoples Samachar" href="#"><img alt="Peoples Samachar"
+                                        src="images/epaper/peoples-samachar.jpg">
+                                    <h3>Peoples Samachar</h3>
+                                </a></li>
 
-                                <li><a title="Pradesh Today" href="/india/pradesh-today.aspx"><img alt="Pradesh Today"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/21_44_435083635Pradesh-Today.jpg">
-                                        <h3>Pradesh Today</h3>
-                                    </a></li>
+                            <li><a title="Prabhat Khabar" href="#"><img alt="Prabhat Khabar"
+                                        src="images/epaper/prabhat-khabar.jpg">
+                                    <h3>Prabhat Khabar</h3>
+                                </a></li>
 
-                                <li><a title="Pratahkal" href="/india/pratahkal.aspx"><img alt="Pratahkal"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/08_03_203740556pratahkal.jpg">
-                                        <h3>Pratahkal</h3>
-                                    </a></li>
+                            <li><a title="Pradesh Today" href="#"><img alt="Pradesh Today"
+                                        src="images/epaper/pradesh-today.jpg">
+                                    <h3>Pradesh Today</h3>
+                                </a></li>
 
-                                <li><a title="Punjab Kesari epaper" href="/india/punjab-kesari-epaper.aspx"><img
-                                            alt="Punjab Kesari epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/20_09_431620966punjab-kesari.jpg">
-                                        <h3>Punjab Kesari epaper</h3>
-                                    </a></li>
+                            <li><a title="Pratahkal" href="#"><img alt="Pratahkal"
+                                        src="images/epaper/pratahkal.jpg">
+                                    <h3>Pratahkal</h3>
+                                </a></li>
 
-                                <li><a title="RAJ EXPRESS" href="/india/raj-express.aspx"><img alt="RAJ EXPRESS"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/22_09_591602256rajexpress.jpg">
-                                        <h3>RAJ EXPRESS</h3>
-                                    </a></li>
+                            <li><a title="Punjab Kesari epaper" href="#"><img alt="Punjab Kesari epaper"
+                                        src="images/epaper/punjab-kesari.jpg">
+                                    <h3>Punjab Kesari epaper</h3>
+                                </a></li>
 
-                                <li><a title="Rajasthan Patrika" href="/india/rajasthan-patrika.aspx"><img
-                                            alt="Rajasthan Patrika"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/rajasthan-patrika.jpg">
-                                        <h3>Rajasthan Patrika</h3>
-                                    </a></li>
+                            <li><a title="RAJ EXPRESS" href="#"><img alt="RAJ EXPRESS"
+                                        src="images/epaper/rajexpress.jpg">
+                                    <h3>RAJ EXPRESS</h3>
+                                </a></li>
 
-                                <li><a title="Ranchi Express" href="/india/ranchi-express.aspx"><img
-                                            alt="Ranchi Express"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/ranchiexpress.jpg">
-                                        <h3>Ranchi Express</h3>
-                                    </a></li>
+                            <li><a title="Rajasthan Patrika" href="#"><img alt="Rajasthan Patrika"
+                                        src="images/epaper/rajasthan-patrika.jpg">
+                                    <h3>Rajasthan Patrika</h3>
+                                </a></li>
 
-                                <li><a title="Rashtriya Garima" href="/india/rashtriya-garima.aspx"><img
-                                            alt="Rashtriya Garima"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Rashtriya-Garima.jpg">
-                                        <h3>Rashtriya Garima</h3>
-                                    </a></li>
+                            <li><a title="Ranchi Express" href="#"><img alt="Ranchi Express"
+                                        src="images/epaper/ranchiexpress.jpg">
+                                    <h3>Ranchi Express</h3>
+                                </a></li>
 
-                                <li><a title="Rashtriya Sahara" href="/india/rashtriya-sahara.aspx"><img
-                                            alt="Rashtriya Sahara"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/rashtriya_sahara.jpg">
-                                        <h3>Rashtriya Sahara</h3>
-                                    </a></li>
+                            <li><a title="Rashtriya Garima" href="#"><img alt="Rashtriya Garima"
+                                        src="images/epaper/rashtriya-garima.jpg">
+                                    <h3>Rashtriya Garima</h3>
+                                </a></li>
 
-                                <li><a title="Sach Kahoon Epaper" href="/india/sach-kahoon-epaper.aspx"><img
-                                            alt="Sach Kahoon Epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/sach-kahoon-epaper.jpg">
-                                        <h3>Sach Kahoon Epaper</h3>
-                                    </a></li>
+                            <li><a title="Rashtriya Sahara" href="#"><img alt="Rashtriya Sahara"
+                                        src="images/epaper/rashtriya_sahara.jpg">
+                                    <h3>Rashtriya Sahara</h3>
+                                </a></li>
 
-                                <li><a title="Sandhya Dainik" href="/india/sandhya-dainik.aspx"><img
-                                            alt="Sandhya Dainik"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/12_15_425263119sandhya-dainik.jpg">
-                                        <h3>Sandhya Dainik</h3>
-                                    </a></li>
+                            <li><a title="Sach Kahoon Epaper" href="#"><img alt="Sach Kahoon Epaper"
+                                        src="images/epaper/sach-kahoon-epaper.jpg">
+                                    <h3>Sach Kahoon Epaper</h3>
+                                </a></li>
 
-                                <li><a title="Sandhya Prakash" href="/india/sandhya-prakash.aspx"><img
-                                            alt="Sandhya Prakash"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/dainik-sandhya-prakash.jpg">
-                                        <h3>Sandhya Prakash</h3>
-                                    </a></li>
+                            <li><a title="Sandhya Dainik" href="#"><img alt="Sandhya Dainik"
+                                        src="images/epaper/sandhya-dainik.jpg">
+                                    <h3>Sandhya Dainik</h3>
+                                </a></li>
 
-                                <li><a title="Sanmarg" href="/india/sanmarg.aspx"><img alt="Sanmarg"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/sanmarg.jpg">
-                                        <h3>Sanmarg</h3>
-                                    </a></li>
+                            <li><a title="Sandhya Prakash" href="#"><img alt="Sandhya Prakash"
+                                        src="images/epaper/sandhya-prakash.jpg">
+                                    <h3>Sandhya Prakash</h3>
+                                </a></li>
 
-                                <li><a title="Seema Sandesh" href="/india/seema-sandesh.aspx"><img alt="Seema Sandesh"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/Seema-Sandesh.jpg">
-                                        <h3>Seema Sandesh</h3>
-                                    </a></li>
+                            <li><a title="Sanmarg" href="#"><img alt="Sanmarg"
+                                        src="images/epaper/sanmarg.jpg">
+                                    <h3>Sanmarg</h3>
+                                </a></li>
 
-                                <li><a title="Swadesh Epaper" href="/india/swadesh-epaper.aspx"><img
-                                            alt="Swadesh Epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/swadesh-epaper-bhopal.jpg">
-                                        <h3>Swadesh Epaper</h3>
-                                    </a></li>
+                            <li><a title="Seema Sandesh" href="#"><img alt="Seema Sandesh"
+                                        src="images/epaper/seema-sandesh.jpg">
+                                    <h3>Seema Sandesh</h3>
+                                </a></li>
 
-                                <li><a title="Swatantra Vaartha" href="/india/swatantra-vaartha.aspx"><img
-                                            alt="Swatantra Vaartha"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/swatantra-vaarttha.jpg">
-                                        <h3>Swatantra Vaartha</h3>
-                                    </a></li>
+                            <li><a title="Swadesh Epaper" href="#"><img alt="Swadesh Epaper"
+                                        src="images/epaper/swadesh-bhopal.jpg">
+                                    <h3>Swadesh Epaper</h3>
+                                </a></li>
 
-                                <li><a title="tarun mitra epaper" href="/india/tarun-mitra-epaper.aspx"><img
-                                            alt="tarun mitra epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/tarun-mitra-epaper.jpg">
-                                        <h3>tarun mitra epaper</h3>
-                                    </a></li>
+                            <li><a title="Swatantra Vaartha" href="#"><img alt="Swatantra Vaartha"
+                                        src="images/epaper/swatantra-vaarttha.jpg">
+                                    <h3>Swatantra Vaartha</h3>
+                                </a></li>
 
-                                <li><a title="Uttam Hindu newspaper" href="/india/uttam-hindu-newspaper.aspx"><img
-                                            alt="Uttam Hindu newspaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/uttamhindu-epaper.jpg">
-                                        <h3>Uttam Hindu newspaper</h3>
-                                    </a></li>
+                            <li><a title="tarun mitra epaper" href="#"><img alt="tarun mitra epaper"
+                                        src="images/epaper/tarun-mitra.jpg">
+                                    <h3>tarun mitra epaper</h3>
+                                </a></li>
 
-                                <li><a title="Vidhan kesari" href="/india/vidhan-kesari.aspx"><img alt="Vidhan kesari"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/vidhan-kesari-epaper.jpg">
-                                        <h3>Vidhan kesari</h3>
-                                    </a></li>
+                            <li><a title="Uttam Hindu newspaper" href="#"><img alt="Uttam Hindu newspaper"
+                                        src="images/epaper/uttamhindu.jpg">
+                                    <h3>Uttam Hindu newspaper</h3>
+                                </a></li>
 
-                                <li><a title="Yashbharat" href="/india/yashbharat.aspx"><img alt="Yashbharat"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/yashbharat-epaper.jpg">
-                                        <h3>Yashbharat</h3>
-                                    </a></li>
+                            <li><a title="Vidhan kesari" href="#"><img alt="Vidhan kesari"
+                                        src="images/epaper/vidhan-kesari.jpg">
+                                    <h3>Vidhan kesari</h3>
+                                </a></li>
 
-                                <li><a title="Yashobhumi epaper" href="/india/yashobhumi-epaper.aspx"><img
-                                            alt="Yashobhumi epaper"
-                                            src="https://dxv7iwx7t9tci.cloudfront.net/epaperimages/">
-                                        <h3>Yashobhumi epaper</h3>
-                                    </a></li>
-</ul>
-</div>
-   
-</div>
-</div>
-</section>
+                            <li><a title="Yashbharat" href="#"><img alt="Yashbharat"
+                                        src="images/epaper/yashbharat.jpg">
+                                    <h3>Yashbharat</h3>
+                                </a></li>
+
+                            <li><a title="Yashobhumi epaper" href="#"><img alt="Yashobhumi epaper"
+                                        src="images/epaper/yashobhumi.jpg">
+                                    <h3>Yashobhumi epaper</h3>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="right-sidebar">
+                        <h2 class="display-2">Magazine In Hindi</h2>
+
+                        <ul class="sidebar">
+
+                            <li><a href="#" title="Aap Ka Bhavishya Magazine Online">Aap Ka Bhavishya Magazine Online</a></li>
+
+                            <li><a href="#" title="Abhivyakti Magazine Online">Abhivyakti Magazine Online</a></li>
+
+                            <li><a href="#" title="Aha Zindagi Magazine Online">Aha Zindagi Magazine Online</a></li>
+
+                            <li><a href="#" title="Bal Bhaskar Magazine Online">Bal Bhaskar Magazine Online</a></li>
+
+
+                            <li><a href="#" title="Bharat Darshan Hindi Magazine">Bharat Darshan Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Cable Quest Hindi Magazine">Cable Quest Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Coal Insights Magazine">Coal Insights Magazine</a></li>
+
+                            <li><a href="#" title="Cricket Samrat Magazine Online">Cricket Samrat Magazine Online</a></li>
+
+                            <li><a href="#" title="Cricket Today Hindi">Cricket Today Hindi</a></li>
+
+                            <li><a href="#" title="Film City Magazine Online">Film City Magazine Online</a></li>
+
+                            <li><a href="#" title="Filmi Duniya Magazine Online">Filmi Duniya Magazine Online</a></li>
+
+                            <li><a href="#" title="Filmi Kaliya Magazine Online">Filmi Kaliya Magazine Online</a></li>
+
+                            <li><a href="#" title="Grih Shobha">Grih Shobha</a></li>
+
+                            <li><a href="#" title="Grihlakshmi Magazine">Grihlakshmi Magazine</a></li>
+
+                            <li><a href="#" title="Guldusta Magazine">Guldusta Magazine</a></li>
+
+                            <li><a href="#" title="Health Plus Hindi Magazine">Health Plus Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Hello Hindustan Magazine">Hello Hindustan Magazine</a></li>
+
+                            <li><a href="#" title="India Today Hindi Magazine">India Today Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Jeevan Nidhi Hindi Magazine">Jeevan Nidhi Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Kadambini Magazine Online">Kadambini Magazine Online</a></li>
+
+                            <li><a href="#" title="Kingstar Magazine Online">Kingstar Magazine Online</a></li>
+
+                            <li><a href="#" title="Lakshya Magazine Online">Lakshya Magazine Online</a></li>
+
+                            <li><a href="#" title="Madhur Kathayen Magazine Online">Madhur Kathayen Magazine Online</a></li>
+
+                            <li><a href="#" title="Manohar Kahaniyan eMag">Manohar Kahaniyan eMag</a></li>
+
+                            <li><a href="#" title="Mantra Tantra Yantra Vigyan Magazine Online">Mantra Tantra Yantra Vigyan Magazine Online</a></li>
+
+                            <li><a href="#" title="Masala Magazine Online">Masala Magazine Online</a></li>
+
+                            <li><a href="#" title="Mayapuri Magazine Online">Mayapuri Magazine Online</a></li>
+
+                            <li><a href="#" title="Meri Saheli Magazine">Meri Saheli Magazine</a></li>
+
+                            <li><a href="#" title="Metro Ujala Hindi Magazine">Metro Ujala Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Modern Kheti Hindi Magazine">Modern Kheti Hindi Magazine</a></li>
+
+                            <li><a href="#" title="ukta Magazine">Mukta Magazine</a></li>
+
+                            <li><a href="#" title="Nandan Magazine Online">Nandan Magazine Online</a></li>
+
+                            <li><a href="#" title="Nirogdham Magazine Online">Nirogdham Magazine Online</a></li>
+
+                            <li><a href="#" title="Nutan Kahaniyana Magazine Online">Nutan Kahaniyana Magazine Online</a></li>
+
+                            <li><a href="#" title="Osho Dhara Hindi Magazine">Osho Dhara Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Osho Times Magazine Online">Osho Times Magazine Online</a></li>
+
+                            <li><a href="#" title="Pratham Impact Magazine Online">Pratham Impact Magazine Online</a></li>
+
+                            <li><a href="#" title="Pratiyogita Darpan Hindi">Pratiyogita Darpan Hindi</a></li>
+
+                            <li><a href="#" title="Raj Sarokor Magazine">Raj Sarokor Magazine</a></li>
+
+                            <li><a href="#" title="Sachchi Kahaniyan Magazine Online">Sachchi Kahaniyan Magazine Online</a></li>
+
+                            <li><a href="#" title="Sadhana Path Magazine">Sadhana Path Magazine</a></li>
+
+                            <li><a href="#" title="Sakhi Magazine Online">Sakhi Magazine Online</a></li>
+
+                            <li><a href="#" title="Samvaad Darpan Magazine Online">Samvaad Darpan Magazine Online</a></li>
+
+                            <li><a href="#" title="Saras Salil Magazine">Saras Salil Magazine</a></li>
+
+                            <li><a href="#" title="Sarita Online Magazine">Sarita Online Magazine</a></li>
+
+                            <li><a href="#" title="Satya Katha eMagazine">Satya Katha eMagazine</a></li>
+
+                            <li><a href="#" title="Sowbhagya Deep Magazine Online">Sowbhagya Deep Magazine Online</a></li>
+
+                            <li><a href="#" title="Steel Insights Hindi Magazine">Steel Insights Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Suman Saurabh Magazine">Suman Saurabh Magazine</a></li>
+
+                            <li><a href="#" title="Suspense Kahaniyan Magazine Online">Suspense Kahaniyan Magazine Online</a></li>
+
+                            <li><a href="#" title="Tadbhav Magazine Online">Tadbhav Magazine Online</a></li>
+
+                            <li><a href="#" title="Taptilok Magazine Online">Taptilok Magazine Online</a></li>
+
+                            <li><a href="#" title="Tehelka Hindi Magazine">Tehelka Hindi Magazine</a></li>
+
+                            <li><a href="#" title="The Sunday Indian Magazine Online">The Sunday Indian Magazine Online</a></li>
+
+                            <li><a href="#" title="Vanitha Hindi Magazine">Vanitha Hindi Magazine</a></li>
+
+                            <li><a href="#" title="Ved Amrut Magazine Online">Ved Amrut Magazine Online</a></li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
     </body>
